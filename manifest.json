@@ -1,5 +1,12 @@
 {
-  "name": "My app",
+  "name": "Fractoid",
+  "icons": [
+    {
+      "src": "icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "start_url": "/Fractoid/",
   "display": "standalone"
 }
