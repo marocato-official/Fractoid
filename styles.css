@@ -1,0 +1,51 @@
+* {box-sizing: border-box }
+
+body {
+	background-image: url("resources/default/background.png");
+	background-size: 100%;
+	padding: 2em;
+}
+
+.centeredtext {
+		text-align: center;
+	
+}
+
+.casing {
+	padding: 1em;
+	background-color: white;
+	color: #483D8B;
+	border-radius: 16px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grid24 {
+	display: grid;
+	grid-template-columns: auto auto;
+	width: 100%;
+	gap: 8px;
+	text-align: center;
+}
+
+.head1 {
+	font-size: 48px;
+}
+
+.subt {
+	font-size: 16px;
+}
+
+button {
+	border-radius: 8px;
+	padding: 0.5em;
+	border: 2px solid #483D8B;
+	background-color: white;
+	color: #483D8B;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+	border: 2px solid white;
+	background-color: #483D8B;
+	color: white;
+}
