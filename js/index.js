@@ -2,7 +2,7 @@ window.onload = () => {
 	/** App Setup **/
 	if (window.indexedDB) {
 		/** IndexedDB is supported, proceed. **/
-		alert("all good brotha");
+		//alert("all good brotha");
 		
 		/** Access IndexedDB storage of "FractoidGlobals" **/
 		var db;
@@ -15,7 +15,7 @@ window.onload = () => {
 		request.onupgradeneeded = event => {
 			db = event.target.result;
 			
-			const objectStore = db.createObjectStore("DataSlots", {autoIncrement: true});
+			const objectStore = db.createObjectStore("DataSlots", { keyPath: "slot" });
 			objectStore.transaction.oncomplete = event => {
 				
 			}
@@ -71,7 +71,10 @@ function util_MenuButtons(db) {
 			
 			const objSto_DataSlots = db.transaction("DataSlots", "readwrite").objectStore("DataSlots");
 			const req_DataSlots = objSto_DataSlots.add( {
-				"slot": v_slotalias
+				"slot": v_slotalias,
+				"members": [
+				
+				]
 			});
 			
 			req_DataSlots.onsuccess = (event) => {
@@ -79,6 +82,11 @@ function util_MenuButtons(db) {
 			}
 		}
 		
+	}
+	
+	/** Old Data Slot **/
+	document.getElementById("b_LoadOldData").onclick = function() {
+		document.location.href = 'pages/dataSelectOld.html';
 	}
 	
 	document.getElementById("install").addEventListener("click", async () => {
