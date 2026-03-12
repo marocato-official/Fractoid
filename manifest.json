@@ -1,5 +1,5 @@
 {
   "name": "My app",
-  "start_url": "/",
+  "start_url": "/Fractoid/",
   "display": "standalone"
 }
