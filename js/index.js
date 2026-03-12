@@ -81,14 +81,14 @@ function util_MenuButtons(db) {
 		
 	}
 	
-	installButton.addEventListener("click", async () => {
+	document.getElementById("install").addEventListener("click", async () => {
 	  if (!installPrompt) {
 		return;
 	  }
 	  const result = await installPrompt.prompt();
 	  console.log(`Install prompt was: ${result.outcome}`);
 	  installPrompt = null;
-	  installButton.setAttribute("hidden", "");
+	  document.getElementById("install").setAttribute("hidden", "");
 	});
 }
 
