@@ -75,7 +75,7 @@ function util_MenuButtons(db) {
 			});
 			
 			req_DataSlots.onsuccess = (event) => {
-				document.location.href = '/pages/menuMain.html';
+				document.location.href = 'pages/menuMain.html';
 			}
 		}
 		
